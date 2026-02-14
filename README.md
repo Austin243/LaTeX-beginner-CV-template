@@ -8,6 +8,14 @@ This template is set up so beginners only edit one file:
 
 You can open `preview.pdf` to see the example output.
 
+## Why This Exists
+
+After talking with undergraduates and reviewing their CVs, one common pain point kept coming up: formatting. Many wanted more control over how their resumes and CVs looked, but the process felt hard to manage.
+
+I remembered having the same experience myself. My own LaTeX learning curve was steep. People in CS, math, and physics are often exposed to LaTeX earlier, but many in chemistry, life sciences, and social sciences do not get that same early background.
+
+This guide and template are my attempt to simplify setting up a CV in LaTeX. It can still feel daunting, but I hope the hints throughout the files make the process easier.
+
 ## Overleaf Setup (Upload ZIP, easiest)
 
 1. Go to Overleaf and sign in.
