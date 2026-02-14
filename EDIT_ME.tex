@@ -1,0 +1,192 @@
+% cv_content.tex
+% ============================================================
+% EDIT THIS FILE (beginner friendly)
+% ============================================================
+% If you are new to LaTeX, here are the 3 rules:
+%   1) Only edit this file (cv_content.tex). Compile main.tex.
+%   2) Every { must have a matching }.
+%   3) To hide a line/section, put a % at the start of the line.
+%
+% Special characters:
+%   If you want to literally type any of these, you must "escape" them:
+%     #  $  %  &  _  {  }  ~  ^  \
+%   Examples: 50\%   AT\&T   file\_name   C\#
+% ============================================================
+
+% ============================================================
+% 1) YOUR INFO (EDIT ONLY THE TEXT INSIDE THE { ... })
+% ============================================================
+\newcommand{\CVName}{YOUR NAME}
+\newcommand{\CVTitleLine}{Optional: Your title / tagline (leave blank if you want)}
+
+\newcommand{\CVPhone}{+1 (555) 123-4567}
+\newcommand{\CVEmail}{you@example.com}
+\newcommand{\CVLocation}{City, State, Country}
+
+% Links (leave the URL blank if you don't want to show it)
+\newcommand{\CVWebsiteLabel}{yourwebsite.com}
+\newcommand{\CVWebsiteURL}{https://yourwebsite.com}
+
+\newcommand{\CVLinkedInLabel}{LinkedIn}
+\newcommand{\CVLinkedInURL}{https://www.linkedin.com/in/your-handle/}
+
+\newcommand{\CVGitHubLabel}{GitHub}
+\newcommand{\CVGitHubURL}{https://github.com/your-handle}
+
+\newcommand{\CVScholarLabel}{Google Scholar}
+\newcommand{\CVScholarURL}{}
+
+\newcommand{\CVORCIDLabel}{ORCID}
+\newcommand{\CVORCIDURL}{}
+
+% ============================================================
+% 2) FONT (Pick ONE line, comment out the rest)
+% ============================================================
+\headerfontiii
+%\headerfonti
+%\headerfontii
+%\headerfontiv
+%\headerfontx
+
+% ============================================================
+% 3) HEADER (No need to edit unless you want a different layout)
+% ============================================================
+\begin{center}
+  {\Huge\textbf{\CVName}}\\
+  \cvIfNotEmpty{\CVTitleLine}{{\large \CVTitleLine}\\}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+  \small{
+    \cvIfNotEmpty{\CVPhone}{\CVPhone\quad}
+    \cvEmailLink{\CVEmail}
+  }
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+  \small{
+    \cvIconLink{\faGlobe}{\CVWebsiteLabel}{\CVWebsiteURL}
+    \cvIconLink{\faLinkedin}{\CVLinkedInLabel}{\CVLinkedInURL}
+    \cvIconLink{\faGithub}{\CVGitHubLabel}{\CVGitHubURL}
+    \cvIconLink{\faGraduationCap}{\CVScholarLabel}{\CVScholarURL}
+    % If you want to show ORCID, fill CVORCIDURL above AND uncomment this line:
+    %\cvIconLink{\faOrcid}{\CVORCIDLabel}{\CVORCIDURL}
+  }
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+  \small{\CVLocation}
+\end{center}
+
+\vspace{-4mm}
+
+% ============================================================
+% CV CONTENT STARTS HERE
+% Replace the placeholder text below with your own.
+% To add more items, copy/paste the existing blocks.
+% ============================================================
+
+\section{\textbf{Objective / Summary}}
+\vspace{1mm}
+\small{
+Write 1--3 sentences about what you do and what you are looking for.
+
+Example (delete this): PhD applicant in \textbf{YOUR FIELD} with experience in \textbf{SKILL A} and \textbf{SKILL B}. Interested in \textbf{TOPIC / ROLE}.
+}
+\vspace{-2mm}
+
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {University Name}{City, Country}
+  {Degree (e.g., M.S. in Chemistry)}{Start Year -- End Year (or Present)}
+  \resumeItemListStart
+    \item Optional: thesis / concentration / GPA / key coursework (1--3 bullets max)
+  \resumeItemListEnd
+
+\resumeSubheading
+  {University Name}{City, Country}
+  {Degree (e.g., B.S. in Physics)}{Start Year -- End Year}
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Job Title}{City, Country}
+  {Company / Lab / Organization}{Month Year -- Month Year (or Present)}
+  \resumeItemListStart
+    \item Start each bullet with an action verb (Built, Led, Analyzed, Designed, etc.).
+    \item Use numbers when possible (e.g., "reduced runtime by 40\%", "served 120+ users").
+    \item Keep bullets short and specific (2--5 bullets per role).
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Job Title}{City, Country}
+  {Company / Lab / Organization}{Month Year -- Month Year}
+  \resumeItemListStart
+    \item Placeholder bullet.
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+% -------------------- OPTIONAL: Projects --------------------
+% If you don't want this section, delete it or comment it out.
+\section{\textbf{Projects (Optional)}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Project Name}{Tools / Methods (optional)}{Year}{\href{https://example.com}{link (optional)}}
+  \resumeItemListStart
+    \item What you built / studied.
+    \item Why it mattered / what the result was.
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+% -------------------- OPTIONAL: Publications --------------------
+\section{\textbf{Publications (Optional)}}
+\vspace{0.2mm}
+\begin{itemize}
+  \item[\textbf{[1]}] \textbf{Your Paper Title}. Author A, Author B, \textbf{Your Name}. \textit{Journal / Conference}, Year. \href{https://doi.org/xxxxx}{DOI / link}
+  % Copy/paste the line above for more publications.
+\end{itemize}
+\vspace{-6mm}
+
+% -------------------- OPTIONAL: Awards --------------------
+\section{\textbf{Awards \& Honors (Optional)}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Award Name}{Organization / Location}{Year}{}
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+\resumeHeadingSkillStart
+  \resumeSubItem{Programming:}{Python, R, C++ (example)}
+  \resumeSubItem{Tools:}{LaTeX, Git, Linux (example)}
+  \resumeSubItem{Techniques:}{Machine learning, data analysis, simulation (example)}
+\resumeHeadingSkillEnd
+
+% -------------------- OPTIONAL: Service / Outreach --------------------
+%\section{\textbf{Service / Outreach (Optional)}}
+%\vspace{0.4mm}
+%\begin{itemize}
+%  \item Example: Volunteer mentor for XYZ program (Year).
+%\end{itemize}
+

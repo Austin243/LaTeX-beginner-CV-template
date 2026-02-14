@@ -1,0 +1,171 @@
+% cv_style.tex
+% ============================================================
+% Beginner-Friendly CV / Resume Template (LaTeX)
+% ============================================================
+% You usually do NOT need to edit this file.
+% Most people only edit: EDIT_ME.tex
+%
+% If you want to change the *look* (fonts, colors, spacing),
+% this is the right file to edit.
+%
+% Credits / licensing:
+% - This project was built from an academic CV template and then modified.
+% - See LICENSE_AND_CREDITS.md for details.
+% ============================================================
+
+% -------------------- Packages --------------------
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{etoolbox} % provides \ifdefempty (and other helpers)
+
+% -------------------- Easy settings --------------------
+% Accent color (used for links)
+\definecolor{accent}{RGB}{0,0,139} % dark blue
+
+% Page margins
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt}
+
+% Hyperlinks
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  filecolor=accent,
+  urlcolor=accent,
+}
+
+% -------------------- Header/Footer --------------------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% -------------------- Section formatting --------------------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% -------------------- Box style (optional) --------------------
+% Used by the \cvsection command (you can ignore this if you don't use it)
+\tcbset{
+  frame code={},
+  center title,
+  left=0pt,
+  right=0pt,
+  top=0pt,
+  bottom=0pt,
+  colback=gray!15,
+  colframe=white,
+  width=\dimexpr\textwidth\relax,
+  enlarge left by=-2mm,
+  boxsep=4pt,
+  arc=0pt, outer arc=0pt,
+}
+
+% -------------------- Helpers --------------------
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Commands for icon sizing/positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+
+% -------------------- CV "building blocks" --------------------
+% These commands are used in cv_content.tex.
+
+\newcommand{\resumeItem}[2]{
+  \item{\textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#4}} \\
+    \textit{\footnotesize{#3}} & \footnotesize{#2}\\
+  \end{tabular*}
+  \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#3}} \\
+    \footnotesize{\textit{#2}} & \footnotesize{#4}
+  \end{tabular*}
+  \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% Bullet styles
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+% List wrappers (spacing tuned for CVs)
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+
+% Optional boxed section header (not required)
+\newcommand{\cvsection}[1]{%
+  \vspace{2mm}
+  \begin{tcolorbox}
+    \textbf{\large #1}
+  \end{tcolorbox}
+  \vspace{-4mm}
+}
+
+% Column helpers (optional)
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% -------------------- Font options --------------------
+% Pick one header font by setting \HeaderFont in cv_content.tex.
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter
+
+% -------------------- Beginner-friendly header macro --------------------
+% Users fill in variables in cv_content.tex.
+
+% A small helper: only print something if a macro is not empty.
+% Example: \cvIfNotEmpty{\CVEmail}{...}
+\newcommand{\cvIfNotEmpty}[2]{\ifdefempty{#1}{}{#2}}
+
+% A small helper to print an icon+link if URL is not empty.
+% #1 icon command (e.g., \faLinkedin)
+% #2 label to display (e.g., LinkedIn)
+% #3 URL
+\newcommand{\cvIconLink}[3]{%
+  \cvIfNotEmpty{#3}{\socialicon{#1}\,\href{#3}{#2}\quad}%
+}
+
+% A small helper to print a mailto link if email is not empty.
+\newcommand{\cvEmailLink}[1]{%
+  \cvIfNotEmpty{#1}{\href{mailto:#1}{#1}}%
+}
+
