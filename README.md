@@ -18,6 +18,8 @@ This guide and template are my attempt to simplify setting up a CV in LaTeX. It 
 
 ## Overleaf Setup (Upload ZIP, easiest)
 
+Overleaf (https://www.overleaf.com) is a website with an online LaTeX editor, so you can edit your CV in the browser.
+
 1. Go to Overleaf and sign in.
 2. Click `New Project` -> `Upload Project`.
 3. Upload `BeginnerFriendly_CV_Template.zip`.

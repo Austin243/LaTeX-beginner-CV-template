@@ -12,6 +12,8 @@ You can also open **`preview.pdf`** to see what the placeholder CV looks like.
 
 ## Option A: Use in Overleaf (recommended for beginners)
 
+Overleaf (https://www.overleaf.com) is a website with an online LaTeX editor, so you can edit your CV in the browser.
+
 1. Go to Overleaf and sign in (free account is fine).
 2. Click **New Project** → **Upload Project**.
 3. Upload the **.zip** that contains these files.
